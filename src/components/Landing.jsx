@@ -12,7 +12,7 @@ const Landing = () => {
              <div className="content text-3xl font-bold ">
                I create  <HighlightText text="product design"/> <br/> and brand experience
              </div>
-             <div className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat possimus numquam facere deleniti animi exercitationem dignissimos adipisci cupiditate odit, la.</div>
+             <div className="">Lorem anand ipsum dolor sit amet consectetur adipisicing elit. Quaerat possimus numquam facere deleniti animi exercitationem dignissimos adipisci cupiditate odit, la.</div>
              <div className="btn mt-5">
                 <Button text="Get in Touch"/>
              </div>
