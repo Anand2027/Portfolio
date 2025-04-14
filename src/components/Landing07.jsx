@@ -14,7 +14,7 @@ const Landing07 = () => {
   return (
     <div className='bg-gray-800 text-white'>
       <div className="upper flex justify-around items-center pt-3">
-        <img src={Frame} className='bg-white '></img>
+        <img src={Frame} className='bg-white rounded-sm '></img>
 
      <div className="middle "> 
      <ul className='flex  '>
