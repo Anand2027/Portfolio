@@ -26,7 +26,6 @@ const Landing = () => {
       </div>
 
       {/* Uncomment these if needed */}
-      {/* <Landing02 /> */}
       {/* <Cards /> */}
       {/* <Landing03 /> */}
     </div>
