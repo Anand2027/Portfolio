@@ -3,10 +3,10 @@ import React from 'react'
 const Landing06 = () => {
   return (
     <div className='text-center items-center'>
-      <div className="upper text-center items-center pt-[400px]">
+      <div className="upper text-center items-center pt-[40px]">
         <p className="font-[500]">Get In Touch</p>
         <h1 className='text-3xl font-[650]'>Contact Me</h1>
-        <p className='font-[500]'>Lorem ipsum dolor sit amet conas, aedit nostrum optio quia aperiam id? Illum!</p>
+        <p className=' max-[400px]:p-5 font-[500]'>Lorem ipsum dolor sit amet conas, aedit nostrum optio quia aperiam id? Illum!</p>
       </div>
 
 
@@ -18,7 +18,7 @@ const Landing06 = () => {
 
 
 
-    <div className="min-h-screen bg-white flex items-center justify-center p-4">
+    <div className="  bg-white flex items-center justify-center p-4 mb-10">
       <form className="bg-white p-6 rounded-xl shadow-md w-full max-w-2xl border-1 border-blue-500 rounded0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -86,7 +86,7 @@ const Landing06 = () => {
         </button>
       </form>
     </div>
-  );
+  
 
 
 

@@ -23,7 +23,7 @@ function App() {
       <Landing/>
       <Landing02/>
       <Cards/>
-      <Landing03/>
+      {/* <Landing03/> */}
       <Landing04/>
       <Landing05/>
       <Landing06/>

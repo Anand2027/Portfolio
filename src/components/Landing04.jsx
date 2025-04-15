@@ -8,8 +8,8 @@ const Landing04 = () => {
   return (
     <div>
       <div className="container max-w-[93vw] m-auto">
-        <div className="first flex flex-row justify-between pr-[30px] pl-[30px]">
-            <div className="left">
+        <div className="first flex flex-col gap-6 sm:flex-row justify-center items-center sm:justify-between pr-[30px] pl-[30px]">
+            <div className="left text-center">
             <p className='text-2xl font-medium'>Recent Projects</p>
             <h1 className='text-4xl font-[750]'>My Portfolio</h1>
             </div>

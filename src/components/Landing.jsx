@@ -6,8 +6,8 @@ import anand from "../images/anand.png";
 const Landing = () => {
   return (
     <div>
-      <div className="body flex justify-center items-center flex-col md:flex-row h-screen max-w-[93vw] m-auto">
-        <div className="left w-1/2 flex gap-3 flex-col bg-gree-500 h-screen pt-32">
+      <div className="body flex justify-center  items-center flex-col md:flex-row h-screen max-w-[93vw] m-auto">
+        <div className="left p-4  w-full md:w-1/2 flex gap-3 flex-col bg-gree-500 h-screen pt-32">
           <div className="name text-lg font-[750]">Hey, I am Anand</div>
           <div className="content text-3xl font-bold">
             I create <HighlightText text="product design" /> <br /> and brand experience
@@ -20,7 +20,7 @@ const Landing = () => {
           </div>
         </div>
 
-        <div className="right w-1/2 h-screen">
+        <div className="right  w-full md:w-1/2 h-screen">
           <img src={anand} className="mt-14" alt="Anand's profile" />
         </div>
       </div>
