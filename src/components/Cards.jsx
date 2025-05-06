@@ -5,9 +5,8 @@ import cardData from "./Card_deatail";
 
 
 
-
-const Card = ({ title, description, image }) => (
-  <div className="bg-white shadow-2xl rounded-2xl p-4 w-70 text-center items-center transform transition-transform duration-300 hover:scale-105  ">
+const Card = ({ title, description, image , toggle,setToggle}) => (
+  <div className={`${toggle ?"bg-white" :"bg-blue-70"} shadow-2xl  rounded-2xl p-4 w-70 text-center items-center transform transition-transform duration-300 hover:scale-105`}>
     <img
       src={image}
       alt={title}
@@ -34,5 +33,4 @@ const Cards = () => {
 };
 
 export default Cards;
-
 

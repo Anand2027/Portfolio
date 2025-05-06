@@ -18,8 +18,8 @@ const Landing06 = () => {
 
 
 
-    <div className="  bg-white flex items-center justify-center p-4 mb-10">
-      <form className="bg-white p-6 rounded-xl shadow-md w-full max-w-2xl border-1 border-blue-500 rounded0">
+    <div className="  flex items-center justify-center p-4 mb-10">
+      <form className=" p-6 rounded-xl shadow-md w-full max-w-2xl border-1 border-blue-500 rounded0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className=" flex text-xs mb-1">First name</label>

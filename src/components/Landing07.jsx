@@ -28,12 +28,17 @@ const Landing07 = () => {
      </div>
        
         <ul className='flex'>
+          <a href="https://www.facebook.com/share/165ZsHCUBS/" target='_main'>
             <li  className='p-2 transform transition:transform duration-300 hover:scale-120'><FaFacebook /></li>
-            <a href="">
+            </a>
+            <a href="https://www.instagram.com/anand_100roop/profilecard/?igsh=MTB5dHJteWdqOXNmag==" target='_main' >
             <li  className='p-2 transform transition:transform duration-300 hover:scale-120'><FaInstagramSquare /></li>
             </a>
             <li  className='p-2 transform transition:transform duration-300 hover:scale-120'><FaTwitter /></li>
+
+            <a href="https://www.linkedin.com/in/anand-swaroop-gupta-42b72623b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "target='_main'>
             <li  className='p-2 transform transition:transform duration-300 hover:scale-120'><FaLinkedin /></li>
+            </a>
         </ul>
        
       </div>

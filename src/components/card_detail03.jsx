@@ -7,7 +7,7 @@ const card_new = [
         logo:<MdStarPurple500 />,
         kuchh: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio tenetur delectus voluptatem aliquam vitae nisi culpa, deserunt corporis nihil suscipit error quia molestias atque labore quos in porro aut beatae.",
         photo: Avatar,
-        Name: "Shivang Sharma",
+        Name: "Shivam Sharma",
 },
 
 {
@@ -21,6 +21,25 @@ const card_new = [
     kuchh: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio tenetur delectus voluptatem aliquam vitae nisi culpa, deserunt corporis nihil suscipit error quia molestias atque labore quos in porro aut beatae.",
     photo: Avatar,
     Name: "Ekansh Chauhan",
+},
+{
+    logo:<MdStarPurple500 />,
+    kuchh: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio tenetur delectus voluptatem aliquam vitae nisi culpa, deserunt corporis nihil suscipit error quia molestias atque labore quos in porro aut beatae.",
+    photo: Avatar,
+    Name: "Shivam Sharma",
+},
+
+{
+logo:<MdStarPurple500 />,
+kuchh: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio tenetur delectus voluptatem aliquam vitae nisi culpa, deserunt corporis nihil suscipit error quia molestias atque labore quos in porro aut beatae.",
+photo: Avatar,
+Name: "Shivam Sharma",
+},
+{
+logo:<MdStarPurple500 />,
+kuchh: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio tenetur delectus voluptatem aliquam vitae nisi culpa, deserunt corporis nihil suscipit error quia molestias atque labore quos in porro aut beatae.",
+photo: Avatar,
+Name: "Ekansh Chauhan",
 },
 
 
