@@ -33,7 +33,7 @@ const Navbar = ({toggle , setToggle}) => {
   
       
 
-    <div className='  bg-purple-600 relative w-[100vw]  py-4 b-20 flex items-center  '>
+    <div className='  bg-purple-600 relative w-[100vw]  py-4  flex items-center  '>
       <div className="container flex flex-row items-center justify-evenly">
 
        <img src={Frame}

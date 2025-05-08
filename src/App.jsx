@@ -14,12 +14,14 @@ import Landing06 from './components/Landing06'
 import Landing07 from './components/Landing07'
 import Navbar from './components/Navbar'
 import ScrollToTopButton from './components/ScrollToTopButton'
-import { Particles } from "react-tsparticles";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Address from './components/Address'
-import PurpleParticles from './components/PurpleParticles'
+
 import Final from './components/Final'
 
+import Certificates from './components/Certificates'
+import ParticlesBackground from './components/ParticlesBackground';
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -31,9 +33,12 @@ function App() {
   return (
     <div style={{background : toggle ? '#1f2323' : "" , color : toggle ? 'white' : ''}}>
        
+
+       <ParticlesBackground/>
       <BrowserRouter>
       <Navbar toggle={toggle} setToggle={setToggle}/>
       <Final/>
+      
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/" element={<Landing04 />} />
@@ -49,19 +54,11 @@ function App() {
       <Landing04/>
       <Landing05/>
       <Landing06 toggle={toggle} setToggle={setToggle}/> */} */}
+      <Certificates/>
       <Address/>
       <Landing07/>
-      {/* <ScrollToTopButton/>
+       <ScrollToTopButton/>
 
-      <div>
-
-      <div style={{ position: "relative", zIndex: 1, textAlign: "center", marginTop: "100px" }}>
-        <h1>Welcome to My App</h1>
-        <p>Purple particles on a white background</p>
-      </div>
-    </div>
-  
-      {/* <Navbar toggle={toggle} setToggle={setToggle} /> */}
      
     </BrowserRouter>
     </div>

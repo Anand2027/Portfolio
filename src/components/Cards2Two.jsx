@@ -36,9 +36,8 @@ const Cards2Two = () => {
           description={card.description}
           image={card.image}
           dribble={card.dribble}
-
-
         />
+
       ))}
     </div>
   );
