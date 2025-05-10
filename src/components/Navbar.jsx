@@ -1,5 +1,6 @@
-
-
+import { MdOutlineLightMode } from "react-icons/md";
+import { MdDarkMode } from "react-icons/md";
+import { motion } from "framer-motion";
 // -------------------------------
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Landing from './Landing'
@@ -15,6 +16,8 @@ import Frame from "../images/Frame.svg"
 import { BsToggle2Off } from "react-icons/bs";
 import { BsToggle2On } from "react-icons/bs";
 import Landing06 from './Landing06';
+
+
 
 const Navbar = ({toggle , setToggle}) => {
 
@@ -33,7 +36,7 @@ const Navbar = ({toggle , setToggle}) => {
   
       
 
-    <div className='  bg-purple-600 relative w-[100vw]  py-4  flex items-center  '>
+    <div className='  bg-purple-600 relative w-[100vw]  py-4    '>
       <div className="container flex flex-row items-center justify-evenly">
 
        <img src={Frame}
@@ -42,7 +45,7 @@ const Navbar = ({toggle , setToggle}) => {
 
 
         {/* Desktop Nav */}
-        <nav className={` ${isOpen ? "flex items-center  gap-3 text-white   bg-purple-600 font-bold  p-6 flex-col absolute top-18.5 w-full" : "hidden"} md:flex gap-10 text-white  text-[1.15rem] font-medium`} >
+        <nav className={` ${isOpen ? "flex items-center  gap-3 text-white   bg-purple-600 font-bold  p-6 flex-col absolute top-18.5 w-full" : "hidden"} md:flex gap-4 text-white  text-[1.15rem] font-medium`} >
           {
             data.map((link,index) => (
               <Link  key={index} to={link.path}
@@ -56,7 +59,7 @@ const Navbar = ({toggle , setToggle}) => {
        
 
      {/* HAmburger icon */}
-      <button className='  md:hidden  text-2xl  text-white' onClick={() => setIsOpen(!isOpen)}>
+      <button className='  md:hidden text-2xl  text-white' onClick={() => setIsOpen(!isOpen)}>
         {isOpen?<FaTimes /> : <FaBars />}</button>
        
 
@@ -68,8 +71,8 @@ const Navbar = ({toggle , setToggle}) => {
         Contact Me
         </button>
 
-       <div className="p text-4xl ml-20 cursor-pointer text-white"onClick={()=>setToggle(!toggle)}>
-       {toggle ? <BsToggle2On/>:  <BsToggle2Off/> }
+       <div className="p text-4xl ml-10 cursor-pointer text-white"onClick={()=>setToggle(!toggle)}>
+       {toggle ? <MdOutlineLightMode/> : <MdDarkMode/>}
        </div>
       </div>
     </div>
@@ -77,7 +80,28 @@ const Navbar = ({toggle , setToggle}) => {
   )
 }
 
-export default Navbar
+// const containerVariants = {
+//   hidden: { opacity: 0, x: -100 }, // start from left
+//   visible: {
+//     opacity: 1,
+//     x: 0, // move to original position
+//     transition: { duration: 1, ease: "linear" },
+//   },
+// };
+
+// const NavbarMotion = () => (
+//   <motion.div
+//     variants={containerVariants}
+//     initial="hidden"
+//     whileInView="visible"
+//     viewport={{ once: false, amount: 0.2 }}
+//   >
+//     <Navbar/>
+//   </motion.div>
+// );
+
+export default Navbar;
+
 
 
 

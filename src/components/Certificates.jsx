@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { motion } from 'framer-motion'
 
 import one from "../components/pdf/infosys01.png"
 import two from  "../components/pdf/youtube01.png"
@@ -75,4 +76,25 @@ return (
 }
 
 
-export default Certificates
+
+const containerVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: "linear" },
+  },
+};
+
+const CertificatesWithMotion = () => (
+  <motion.div
+    variants={containerVariants}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: false, amount: 0.2 }}
+  >
+   <Certificates/>
+  </motion.div>
+);
+
+export default CertificatesWithMotion;

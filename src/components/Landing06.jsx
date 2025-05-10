@@ -1,4 +1,6 @@
 import React from 'react'
+import Landing07Motion from './Landing07';
+import { motion } from 'framer-motion';
 
 const Landing06 = () => {
   return (
@@ -10,7 +12,7 @@ const Landing06 = () => {
       </div>
 
 
-      <div className="lower ">
+      <div className="lower  ">
         {/* <label for="fname">First Name:  </label>
          <span className='border-2 border-blue-600'><input type="text" id="fname" nane="firstname" placeholder='  enter first name' required></input></span> */}
 
@@ -18,8 +20,8 @@ const Landing06 = () => {
 
 
 
-    <div className="  flex items-center justify-center p-4 mb-10">
-      <form className=" p-6 rounded-xl shadow-md w-full max-w-2xl border-1 border-blue-500 rounded0">
+    <div className=" flex  text-black items-center justify-center p-4 mb-10">
+      <form className="bg-white  p-6 rounded-xl shadow-md w-full max-w-2xl border-1 border-blue-500 rounded0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className=" flex text-xs mb-1">First name</label>
@@ -86,15 +88,6 @@ const Landing06 = () => {
         </button>
       </form>
     </div>
-  
-
-
-
-
-
-
-
-
 
 
          </div>
@@ -103,4 +96,24 @@ const Landing06 = () => {
   )
 }
 
-export default Landing06
+const containerVariants = {
+  hidden: { opacity: 0, x: -100 }, // start from left
+  visible: {
+    opacity: 1,
+    x: 0, // move to original position
+    transition: { duration: 1, ease: "easeInOut" },
+  },
+};
+
+const Landing06Motion = () => (
+  <motion.div
+    variants={containerVariants}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: false, amount: 0.2 }}
+  >
+    <Landing06/>
+  </motion.div>
+);
+
+export default Landing06Motion;

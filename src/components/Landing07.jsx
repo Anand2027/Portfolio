@@ -1,7 +1,7 @@
 import React from 'react'
 import Frame from "../images/Frame.svg"
-
-
+import { FaGithub } from "react-icons/fa";
+import { motion } from 'framer-motion';
 
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
@@ -29,16 +29,21 @@ const Landing07 = () => {
        
         <ul className='flex'>
           <a href="https://www.facebook.com/share/165ZsHCUBS/" target='_main'>
-            <li  className='p-2 transform transition:transform duration-300 hover:scale-120'><FaFacebook /></li>
+            <li  className='p-2 text-2xl transform transition:transform duration-300 hover:scale-120'><FaFacebook /></li>
             </a>
             <a href="https://www.instagram.com/anand_100roop/profilecard/?igsh=MTB5dHJteWdqOXNmag==" target='_main' >
-            <li  className='p-2 transform transition:transform duration-300 hover:scale-120'><FaInstagramSquare /></li>
+            <li  className='p-2 text-2xl transform transition:transform duration-300 hover:scale-120'><FaInstagramSquare /></li>
             </a>
-            <li  className='p-2 transform transition:transform duration-300 hover:scale-120'><FaTwitter /></li>
+
+            <a href="https://github.com/Anand2027">
+            <li  className='p-2 text-2xl transform transition:transform duration-300 hover:scale-120'><FaGithub /></li>
+            </a>
+           
 
             <a href="https://www.linkedin.com/in/anand-swaroop-gupta-42b72623b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "target='_main'>
-            <li  className='p-2 transform transition:transform duration-300 hover:scale-120'><FaLinkedin /></li>
+            <li  className='p-2 text-2xl transform transition:transform duration-300 hover:scale-120'><FaLinkedin /></li>
             </a>
+
         </ul>
        
       </div>
@@ -55,11 +60,35 @@ const Landing07 = () => {
           <li className='pr-3 hover:underline '>Privacy Policy</li>
           <li className='pr-3 hover:underline' >Terms of Service</li>
           <li className='pr-3 hover:underline '> Cookies Settings</li>
+          
+          <hr></hr>
+          
+          <li className='pr-3  hover:underline '> @copyright reserved</li>
         </ul>
       </div>
     </div>
   )
 }
 
-export default Landing07;
+const containerVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: "linear" },
+  },
+};
+
+const Landing07Motion = () => (
+  <motion.div
+    variants={containerVariants}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: false, amount: 0.2 }}
+  >
+    <Landing07/>
+  </motion.div>
+);
+
+export default Landing07Motion;
 

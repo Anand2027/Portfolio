@@ -1,13 +1,11 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 import Landing from './components/Landing'
-import Landing02 from './components/Landing02'
+
 import { useEffect } from 'react'
 // import Landing03 from './components/landing03'
-import Landing03 from './components/Landing03'
-import Cards from './components/Cards'
+
 import Landing04 from './components/Landing04'
 import Landing05 from './components/Landing05'
 import Landing06 from './components/Landing06'
@@ -23,7 +21,27 @@ import Final from './components/Final'
 import Certificates from './components/Certificates'
 import ParticlesBackground from './components/ParticlesBackground';
 
+import Results from './components/Results'
+
+
+import React from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS styles
+
+
+
+
+
 function App() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true, // animation runs once on scroll
+    });
+  }, []);
+
+
   // const [count, setCount] = useState(0)
   const [toggle , setToggle] = useState(false)
 
@@ -33,7 +51,9 @@ function App() {
   return (
     <div style={{background : toggle ? '#1f2323' : "" , color : toggle ? 'white' : ''}}>
        
+    
 
+       
        <ParticlesBackground/>
       <BrowserRouter>
       <Navbar toggle={toggle} setToggle={setToggle}/>
@@ -54,10 +74,17 @@ function App() {
       <Landing04/>
       <Landing05/>
       <Landing06 toggle={toggle} setToggle={setToggle}/> */} */}
+
+
+
+
       <Certificates/>
+      <Results/>
       <Address/>
       <Landing07/>
        <ScrollToTopButton/>
+
+       
 
      
     </BrowserRouter>

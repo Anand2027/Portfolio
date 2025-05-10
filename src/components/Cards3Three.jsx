@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Card = ({logo,kuchh,photo,Name})=>(
 
-    <div className="bg-amber-50-100 shadow-2xl rounded-xl p-1  w-70 text-center pt-[20px] items-centre transform transition-transform duration-300 md:80 hover:scale-101 border border-green border-solid ">
+    <div className="bg-[#EAFFFF] shadow-3xl rounded-xl p-1 text-black w-70 text-center pt-[20px] items-centre transform transition-transform duration-300 md:80 hover:scale-101 border border-green border-solid ">
         <p className="logo pl-5 flex flex-row pt-2 pb-4">{(logo)} {(logo)} {(logo)} {(logo)} {(logo)}</p>
         <h1 className='text-left pl-3'>{kuchh}</h1>
         <div className="shivang flex ">

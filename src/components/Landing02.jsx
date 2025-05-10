@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const Landing02 = ({toggle , setToggle}) => {
   return (
