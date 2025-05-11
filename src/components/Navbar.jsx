@@ -3,19 +3,13 @@ import { MdDarkMode } from "react-icons/md";
 import { motion } from "framer-motion";
 // -------------------------------
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import Landing from './Landing'
-import Landing04 from './Landing04'
-import Landing05 from './Landing05'
-import Landing07 from './Landing07';
+
 
 // ---------------------------------
 
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Frame from "../images/Frame.svg"
-import { BsToggle2Off } from "react-icons/bs";
-import { BsToggle2On } from "react-icons/bs";
-import Landing06 from './Landing06';
 
 
 
@@ -26,9 +20,9 @@ const Navbar = ({toggle , setToggle}) => {
 
    const data=[
     {list:"Home" , path:"/"},
-    {list:"Portfolio" , path:"/portfolio"},
-    {list:"Sevices" , path:"/services"},
-    {list:"Contacts" , path:"/contacts"},
+    {list:"My Projects" , path:"/projects"},
+    {list:"Academics / Certificates" , path:"/academics"},
+    {list:"Feedbacks" , path:"/feedbacks"},
    ];
 
   return (
@@ -39,9 +33,10 @@ const Navbar = ({toggle , setToggle}) => {
     <div className='  bg-purple-600 relative w-[100vw]  py-4    '>
       <div className="container flex flex-row items-center justify-evenly">
 
+       <Link to="/">
        <img src={Frame}
        className='bg-white rounded'/>
-
+       </Link>
 
 
         {/* Desktop Nav */}
@@ -49,7 +44,7 @@ const Navbar = ({toggle , setToggle}) => {
           {
             data.map((link,index) => (
               <Link  key={index} to={link.path}
-                             className = {`${isOpen ?  "text-white" : ""} transition duration-500       hover:text-yellow-400 cursor-pointer `}
+                             className = {`${isOpen ?  "text-white" : ""} transition duration-500  hover:underline      hover:text-yellow-400 cursor-pointer px-3 `}
                            >
                            {link.list}
                            </Link>
@@ -62,16 +57,17 @@ const Navbar = ({toggle , setToggle}) => {
       <button className='  md:hidden text-2xl  text-white' onClick={() => setIsOpen(!isOpen)}>
         {isOpen?<FaTimes /> : <FaBars />}</button>
        
-
-       <button className={`hidden bg-white px-4 py-2 rounded-sm 
+        <Link to="/contacts">       <button className={`hidden bg-white px-4 py-2 rounded-sm 
        
          md:flex transition duration-400 
           ${isOpen ? "text-red-600" : "text-black"}
          hover:scale-103 border-none  `}>
         Contact Me
         </button>
+        </Link>
 
-       <div className="p text-4xl ml-10 cursor-pointer text-white"onClick={()=>setToggle(!toggle)}>
+
+       <div className="p text-4xl ml-20 cursor-pointer text-white"onClick={()=>setToggle(!toggle)}>
        {toggle ? <MdOutlineLightMode/> : <MdDarkMode/>}
        </div>
       </div>

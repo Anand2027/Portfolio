@@ -3,23 +3,34 @@ import photoTwo from "../images/photoTwo.png" // Adjust the path based on the ac
 
 const Landing03 = () => {
 return (
-    <div>
-        <div className="page3 flex max-w-[93vw] bg-blue- h-screen m-auto md:flex-row">
+      <> 
+     
+    <div className='w-[93vw] pt-10 flex flex-col md:flex-row items-center justify-center  '>
+           
 
-            <div className="left w-1/2 bg-amber- flex items-center justify-center">
-                <img src={photoTwo} className="mt-14 max-w-full h-[400px] transform transition:transform duration-300 hover:scale-105 " alt="Descriptive Alt Text" />
-            </div>
+    
+     <div className="left py-auto px-auto hidden sm:flex md:w-1/2 w-full">
+          <img src={photoTwo} alt='About Me'
+          className='sm:h-[400px] h-[300px] mx-auto'/>
+     </div>
 
-            <div className="right w-1/2 bg-amber flex items-center justify-center">
-                <h1 className="text-white text-lg p-16 text-left">
-                    <p className='text-black'>About</p>
-                    <p className='text-4xl font-[750] text-black mb-[20px]'>About Me</p>
-                    <p className='details text-black'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nisi. Facilis tenetur suscipit ea quae ab eveniet. Enim, eligendi autem. Libero beatae maxime velit ipsam molestiae omnis, sapiente esse, assumenda dolorum soluta voluptatem? Explicabo harum eligendi repellendus modi consequatur quos iste corporis est, accusantium alias, aperiam, error earum aliquid veritatis.</p>
-                </h1>
-            </div>
+     <div className="right flex flex-col justify-center pl-6 md:w-1/2 w-full mt-4 md:mt-0 ">
+          <h1 className='text-3xl text-purple-800 pb-3 font-bold text-center md:text-left  '>About Me</h1>
+          <p>Aspiring IT professional with expertise in C++, MySQL, and Web Development. Recognized for strong academic
+performance and analytical skills. Passionate about problem-solving and front-end development. Aiming to apply my
+skills in a challenging environment to develop efficient and scalable solutions.</p>
+     </div>
 
-        </div>
+     <div className="left py-10 px-auto  sm:hidden md:w-1/2 w-full">
+          <img src={photoTwo} alt='About Me'
+          className='sm:h-[400px] h-[300px] mx-auto'/>
+     </div>
+
+      
     </div>
+    
+    </>
+    
 )
 }
 

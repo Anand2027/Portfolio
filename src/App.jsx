@@ -4,7 +4,7 @@ import './App.css'
 import Landing from './components/Landing'
 
 import { useEffect } from 'react'
-// import Landing03 from './components/landing03'
+// import Landing02 from './components/landing02'
 
 import Landing04 from './components/Landing04'
 import Landing05 from './components/Landing05'
@@ -27,6 +27,8 @@ import Results from './components/Results'
 import React from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
+import Landing02 from './components/Landing02'
+import Landing03 from './components/Landing03'
 
 
 
@@ -61,32 +63,21 @@ function App() {
       
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/" element={<Landing04 />} />
-        <Route path="/" element={<Landing05 />} />
-        <Route path="/" element={<Landing06 />} />
-        <Route path="/portfolio" element={<Landing04 />} />
-        <Route path="/services" element={<Landing05 />} />
+         
+        <Route path="/projects" element={<Landing04 />} />
+        <Route path="/academics" element={<Certificates />} />
         <Route path="/contacts" element={<Landing06 />} />
+        <Route path="/feedbacks" element={<Landing05 />} />
+    
       </Routes>
-      {/* <Landing toggle={toggle} setToggle={setToggle}/>
-      <Landing02 toggle={toggle} setToggle={setToggle}/>
-      <Cards toggle={toggle} setToggle={setToggle}/>
-      <Landing04/>
-      <Landing05/>
-      <Landing06 toggle={toggle} setToggle={setToggle}/> */} */}
-
-
-
-
-      <Certificates/>
+      {/* <Certificates/> */}
       <Results/>
+     
+      <Landing06/>
       <Address/>
       <Landing07/>
        <ScrollToTopButton/>
 
-       
-
-     
     </BrowserRouter>
     </div>
   )

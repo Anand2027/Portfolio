@@ -1,5 +1,5 @@
 import React from 'react'
-import Landing07Motion from './Landing07';
+
 import { motion } from 'framer-motion';
 
 const Landing06 = () => {

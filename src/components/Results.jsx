@@ -141,12 +141,12 @@ return (
 
     {/* <div className="down grid gap-6 grid-cols-1 p-10 md:grid-cols-4 md:p-15"> */}
 
-    <div className="down pb-10 w-[80%] mx-auto p">
+    <div className="down pb-10 w-[70%] mx-auto p">
 
     <Slider {...{ ...settings, autoplay: true, autoplaySpeed: 3000, infinite: true}}> 
        {Data.map((certi, index) => (
        <div 
-        className={`cards rounded-2xl shadow-lg  hover:shadow-2xl  transition-shadow overflow-hidden `} 
+        className={`cards hover:scale-95 transition-transform duration-300  rounded-2xl shadow-lg  hover:shadow-2xl  overflow-hidden `} 
         key={index}
        >
          

@@ -44,7 +44,7 @@ const Data = [
 const Certificates = () => {
 return (
     <div>
-        <div className="upper pl-20">
+        <div className="upper pl-20 pt-10">
             <h1 className='text-3xl font-bold'>Certificates</h1>
             <p className='text-2xl font-bold'>and Achivements</p>
         </div>

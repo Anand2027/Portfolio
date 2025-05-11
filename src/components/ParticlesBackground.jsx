@@ -34,17 +34,17 @@ const ParticlesBackground = () => {
                     interactivity: {
                         events: {
                             onClick: {
-                                enable: true,
+                                enable: false,
                                 mode: "push",
                             },
                             onHover: {
-                                enable: true,
+                                enable: false,
                                 mode: "repulse",
                             },
                         },
                         modes: {
                             push: {
-                                quantity: 4,
+                                quantity: 40,
                             },
                             repulse: {
                                 distance: 100,
@@ -65,8 +65,8 @@ const ParticlesBackground = () => {
                         },
                         move: {
                             enable: true,
-                            speed: 2,
-                            direction: "none",
+                            speed: 1,
+                            direction: "bottom",
                             random: false,
                             straight: false,
                             outModes: {
@@ -75,13 +75,13 @@ const ParticlesBackground = () => {
                             attract: {
                                 enable: false,
                                 rotateX: 600,
-                                rotateY: 1200,
+                                rotateY: 600,
                             },
                         },
                         number: {
                             density: {
                                 enable: true,
-                                area: 800,
+                                area: 700,
                             },
                             value: 100,
                         },
@@ -92,7 +92,7 @@ const ParticlesBackground = () => {
                             type: "circle",
                         },
                         size: {
-                            value: { min: 1, max: 3 },
+                            value: { min: 2, max: 3 },
                         },
                     },
                     detectRetina: true,

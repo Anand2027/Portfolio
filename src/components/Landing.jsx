@@ -1,32 +1,38 @@
 import React from 'react';
 import HighlightText from '../Reuse/HighlightText';
 import Button from '../Reuse/Button';
-// import anand from "../images/mypicinsta-removebg-preview.png";
 import anand from "../images/anand.png"
 import { motion } from 'framer-motion';
 
+import Landing03 from './Landing03';
+
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 
 const Landing = ({toggle , setToggle}) => {
   return (
-    <div className={`${toggle ? "bg-[#1f2323] text-white" : ""}`}>
-      <div className={`body flex  justify-center  items-center flex-col md:flex-row  max-w-[93vw] m-auto`}>
-        <div className="left p-4  w-full md:w-1/2 flex gap-3 flex-col bg-gree-500  pt-32">
+    <div className="">
+      <div className={`body flex  justify-center  items-center flex-col md:flex-row  max-w-[93vw] m-auto `}>
+        <div className="left px-4  w-full md:w-1/2 flex gap-3 flex-col   pt-20">
           <div className="name text-lg font-[750]">Hey, I am Anand</div>
           <div className="content text-3xl font-bold">
-            I create <HighlightText text="product design" /> <br /> and brand experience
+            I am a  <HighlightText text="Frontend Developer" /> <br /> and create Websites
           </div>
           <div className="">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat possimus numquam facere deleniti animi exercitationem dignissimos adipisci cupiditate odit, la.
+I’m a passionate Front-End Developer. I specialize in building responsive, accessible, and performance-optimized web interfaces using modern technologies like HTML, CSS, JavaScript, and frameworks such as React. With a blend of creativity and technical skill, I turn design concepts into functional, interactive websites that users love.
+
           </div>
           <div className="btn mt-5">
+          <Link to ="/contacts">
             <Button text="Get in Touch" />
+            </Link>
           </div>
         </div>
-
+       
         <div className="right  w-full md:w-1/2  overflow-hidden bg-cover ">
-          <img src={anand} className="mt-14 " alt="Anand's profile" />
+          <img src={anand} className="mt-14" alt="Anand's profile" />
         </div>
+        
       </div>
 
   
@@ -55,6 +61,7 @@ const LandingMotion = () => (
     viewport={{ once: false, amount: 0.2 }}
   >
     <Landing />
+    <Landing03/>
   </motion.div>
 );
 
