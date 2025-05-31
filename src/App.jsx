@@ -29,6 +29,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
 import Landing02 from './components/Landing02'
 import Landing03 from './components/Landing03'
+import WhatsAppButton from './components/WhatsAppButton'
 
 
 
@@ -76,6 +77,7 @@ function App() {
       <Landing06/>
       <Address/>
       <Landing07/>
+      <WhatsAppButton/>
        <ScrollToTopButton/>
 
     </BrowserRouter>
