@@ -5,42 +5,27 @@ import { MdStarPurple500 } from "react-icons/md";
 const card_new = [
     {
         logo:<MdStarPurple500 />,
-        kuchh: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio tenetur delectus voluptatem aliquam vitae nisi culpa, deserunt corporis nihil suscipit error quia molestias atque labore quos in porro aut beatae.",
-        photo: Avatar,
-        Name: "Shivam Sharma",
+        kuchh: "Anand consistently demonstrates a strong passion for learning and growth. His dedication and curiosity help him overcome challenges with confidence, setting him on a path to become a skilled professional.",
+           Name: "Shivam Sharma",
 },
 
 {
     logo:<MdStarPurple500 />,
-    kuchh: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio tenetur delectus voluptatem aliquam vitae nisi culpa, deserunt corporis nihil suscipit error quia molestias atque labore quos in porro aut beatae.",
-    photo: Avatar,
-    Name: "Shivam Sharma",
+    kuchh: "Though just starting out, Anand shows a clear passion for development. He is always willing to ask questions and go the extra mile. His dedication is truly commendable."
+,    Name: "Shivang Sharma",
 },
 {
     logo:<MdStarPurple500 />,
-    kuchh: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio tenetur delectus voluptatem aliquam vitae nisi culpa, deserunt corporis nihil suscipit error quia molestias atque labore quos in porro aut beatae.",
+    kuchh: "Anand stands out for his sincerity and willingness to take initiative. Even without hands-on project experience, his attitude sets him apart. He’s someone to watch for in the future",
     photo: Avatar,
-    Name: "Ekansh Chauhan",
+    Name: "Anmol Singh",
 },
 {
     logo:<MdStarPurple500 />,
-    kuchh: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio tenetur delectus voluptatem aliquam vitae nisi culpa, deserunt corporis nihil suscipit error quia molestias atque labore quos in porro aut beatae.",
-    photo: Avatar,
-    Name: "Shivam Sharma",
+    kuchh: "Anand is a fast learner with strong drive to improve.He approaches every task with curiosity and discipline. His passion and consistency set him. I’m confident he’ll grow into skilled professional.",
+    Name: "Aditya Tiwari",
 },
 
-{
-logo:<MdStarPurple500 />,
-kuchh: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio tenetur delectus voluptatem aliquam vitae nisi culpa, deserunt corporis nihil suscipit error quia molestias atque labore quos in porro aut beatae.",
-photo: Avatar,
-Name: "Shivam Sharma",
-},
-{
-logo:<MdStarPurple500 />,
-kuchh: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio tenetur delectus voluptatem aliquam vitae nisi culpa, deserunt corporis nihil suscipit error quia molestias atque labore quos in porro aut beatae.",
-photo: Avatar,
-Name: "Ekansh Chauhan",
-},
 
 
 ]

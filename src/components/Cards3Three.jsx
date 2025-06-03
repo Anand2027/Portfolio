@@ -1,6 +1,8 @@
 import card_new from './card_detail03';
 import React from 'react'
 
+import Avatar from "../images/Avatar.svg";
+
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -13,7 +15,7 @@ const Card = ({logo,kuchh,photo,Name})=>(
         <p className="logo pl-5 flex flex-row pt-2 pb-4">{(logo)} {(logo)} {(logo)} {(logo)} {(logo)}</p>
         <h1 className='text-left pl-3'>{kuchh}</h1>
         <div className="shivang flex ">
-        <img src={photo} alt="Card Photo" className="chhota w-[40px] h-[40px] object-cover pt-1.5 pl-3 " />
+        <img src={Avatar} alt="Card Photo" className="chhota w-[40px] h-[40px] object-cover pt-1.5 pl-3 " />
         <div className="name text-black p-2 font-[550]">{Name}</div>
         </div>
        
