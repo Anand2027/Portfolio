@@ -21,11 +21,7 @@ const SplashScreen = () => {
         >
             <img
                 src={A_logo}
-                className={`w-20 h-20 rounded-lg mb-6 transition-transform duration-[2000ms] ${
-                    fadeOut
-                        ? ''
-                        : 'animate-spin-scale'
-                }`}
+                className="w-20 h-20 rounded-lg mb-6 animate-spin-scale filter-img-color"
                 alt="Logo"
             />
             <div className="h-4" /> {/* One line gap */}
@@ -37,14 +33,17 @@ const SplashScreen = () => {
                 {`
                 @keyframes spin-scale {
                     0% {
-                        transform: rotate(0deg) scale(0.5);
+                        transform: scale(0.5) rotate(0deg);
                     }
                     100% {
-                        transform: rotate(360deg) scale(1);
+                        transform: scale(1) rotate(360deg);
                     }
                 }
                 .animate-spin-scale {
                     animation: spin-scale 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+                }
+                .filter-img-color {
+                    filter: hue-rotate(120deg) saturate(2) brightness(1.2);
                 }
                 `}
             </style>
