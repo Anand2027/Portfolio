@@ -111,6 +111,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import WhatsAppButton from './components/WhatsAppButton';
 import { Element } from 'react-scroll';
+import ChatBot from './components/ChatBot';
 
 function App() {
   useEffect(() => {
@@ -159,6 +160,7 @@ function App() {
         <Landing07 />
         <WhatsAppButton />
         <ScrollToTopButton />
+        <ChatBot/>
       </BrowserRouter>
     </div>
   );

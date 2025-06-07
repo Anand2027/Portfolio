@@ -18,6 +18,7 @@ const SplashScreen = () => {
             className={`h-screen w-screen flex flex-col items-center justify-center bg-[#0D2F58] text-white transition-opacity duration-2000 ${
                 fadeOut ? 'opacity-0' : 'opacity-100'
             }`}
+            style={{ zIndex: 9999, position: 'fixed', top: 0, left: 0 }}
         >
             <img
                 src={A_logo}
@@ -25,7 +26,7 @@ const SplashScreen = () => {
                 alt="Logo"
             />
             <div className="h-4" /> {/* One line gap */}
-            <h1 className="text-4xl font-bold animate-bounce text-center">
+            <h1 className="text-4xl font-bold animate-bounce text-center z-100">
                 Hello ! Welcome To <br />
                 <span className="text-[#00FFC6]">My Portfolio ...</span>
             </h1>
