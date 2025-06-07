@@ -24,9 +24,16 @@ const ChatBot = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/chat', {
-        question: trimmedQuestion,
-      });
+    // Replace 'https://your-server-domain.com/api/chat' with the actual URL of your backend API.
+    // For example, if your backend is running on Vercel, Render, or any cloud/VPS, use that public URL.
+    // Example: 'https://mychatbot-backend.vercel.app/api/chat'
+    // You get this URL from your backend deployment provider after you deploy your API.
+
+const response = await axios.post(
+  'https://portfolio-anand-swaroop-guptas-projects.vercel.app/api/chat',
+  { question: trimmedQuestion }
+);
+
 
       const botReply = response.data.answer?.trim() || 'No response';
       const botMessage = { text: botReply, sender: 'bot' };
