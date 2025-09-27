@@ -112,6 +112,7 @@ import 'aos/dist/aos.css';
 import WhatsAppButton from './components/WhatsAppButton';
 import { Element } from 'react-scroll';
 import ChatBot from './components/ChatBot';
+import AnimatedTimeline from './components/Timeline';
 
 function App() {
   useEffect(() => {
@@ -151,6 +152,10 @@ function App() {
         </Element>
 
         <Results />
+          <div>
+      
+      <AnimatedTimeline />
+    </div>
 
          <Element name="contacts">
           <Landing06 />

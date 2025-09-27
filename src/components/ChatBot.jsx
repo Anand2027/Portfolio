@@ -14,6 +14,12 @@ const ChatBot = () => {
 
   const toggleChat = () => setIsOpen(!isOpen);
 
+  useEffect(() => {
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [messages, loading]);
+
   const generateAnswer = async () => {
     const trimmedQuestion = question.trim();
     if (!trimmedQuestion) return;
@@ -24,18 +30,12 @@ const ChatBot = () => {
     setLoading(true);
 
     try {
-    // Replace 'https://your-server-domain.com/api/chat' with the actual URL of your backend API.
-    // For example, if your backend is running on Vercel, Render, or any cloud/VPS, use that public URL.
-    // Example: 'https://mychatbot-backend.vercel.app/api/chat'
-    // You get this URL from your backend deployment provider after you deploy your API.
+      // Change this URL if your backend is deployed somewhere else
+      const response = await axios.post('http://localhost:5000/api/chat', {
+        question: trimmedQuestion,
+      });
 
-const response = await axios.post(
-  'https://portfolio-anand-swaroop-guptas-projects.vercel.app/api/chat',
-  { question: trimmedQuestion }
-);
-
-
-      const botReply = response.data.answer?.trim() || 'No response';
+      const botReply = response.data.answer || 'No response';
       const botMessage = { text: botReply, sender: 'bot' };
       setMessages((prev) => [...prev, botMessage]);
     } catch (error) {
@@ -46,12 +46,6 @@ const response = await axios.post(
       setLoading(false);
     }
   };
-
-  useEffect(() => {
-    if (messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [messages, loading]);
 
   return (
     <>
