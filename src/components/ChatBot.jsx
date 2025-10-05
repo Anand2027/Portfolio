@@ -31,7 +31,7 @@ const ChatBot = () => {
 
     try {
       // Change this URL if your backend is deployed somewhere else
-      const response = await axios.post('http://localhost:5000/api/chat', {
+      const response = await axios.post('http://localhost:5001/api/chat', {
         question: trimmedQuestion,
       });
 
