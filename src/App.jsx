@@ -112,6 +112,7 @@ import 'aos/dist/aos.css';
 import WhatsAppButton from './components/WhatsAppButton';
 import { Element } from 'react-scroll';
 import ChatBot from './components/ChatBot';
+import RealtimeChat from './components/RealtimeChat';
 import AnimatedTimeline from './components/Timeline';
 
 function App() {
@@ -166,6 +167,7 @@ function App() {
         <WhatsAppButton />
         <ScrollToTopButton />
         <ChatBot/>
+        <RealtimeChat/>
       </BrowserRouter>
     </div>
   );
