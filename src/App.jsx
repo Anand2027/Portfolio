@@ -60,7 +60,7 @@ function App() {
         </Element>
 
         <Element name="feedbacks">
-          <Landing05 />
+          <Landing05 /> 
         </Element>
 
         <Results />
