@@ -7,7 +7,7 @@ return (
     <div>
         {/* <div className="upper"></div> */}
         <h1 className=' text-4xl font-bold text-center p-2'>My Location</h1>
-        <p className=' text-xl font-bold text-center p-3'>Mahagun P.G. Near Ryan International School <br></br> Hapur Bypass, Ghaziabad, Uttar Pradesh </p>
+        <p className=' text-xl font-bold text-center p-3'>lakda Boys Hostel Near Ryan International School <br></br> Hapur Bypass, Ghaziabad, Uttar Pradesh </p>
 
         <div className="map mb-3 flex items-center justify-center p-5" >
             <iframe 

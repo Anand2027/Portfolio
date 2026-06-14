@@ -14,21 +14,21 @@ import three from "../components/pdf/infosys02.png"
 const Data = [
   {
     title: "Machine Learning",
-    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque obcaecati fuga illo, nisi id officiis fugit eum cu",
+    description:"Completed a Machine Learning certification program, gaining hands-on experience in data preprocessing, model training, evaluation techniques, and predictive analytics using real-world datasets.",
     image: one,
     button:"Download ->",
     link:"https://drive.google.com/file/d/1BxXSKDW5oeHCOftg8aaZpo5Wyfg7adSK/view?usp=drivesdk"
   },
   {
     title: "HTML/CSS",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque obcaecati fuga illo, nisi id officiis fugit eum cu",
+    description: "Completed an HTML & CSS certification, gaining strong knowledge of web page structure, responsive layouts, styling techniques, and modern user interface design.",
     image: two,
      button:"Download ->",
      link:"https://drive.google.com/file/d/1JZbeWvyc1kMh_vUBSmE94JiTf7smNbQp/view?usp=sharing"
   },
   {
     title: "Python Programming",
-    description:  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque obcaecati fuga illo, nisi id officiis fugit eum cu",
+    description:  "Completed a Python Programming certification, gaining knowledge of core Python concepts, object-oriented programming, data structures, and problem-solving techniques.",
     image: three,
     button:"Download ->",
     link:"https://drive.google.com/file/d/1C-7prd-RhwQ9MbJldhtmNJ5iMKh_JYS4/view?usp=drivesdk"
@@ -61,7 +61,7 @@ return (
                         />
                     </div>
                     
-                    <div className='bg-[#262634] text-white p-5 text-center'>
+                    <div className='bg-[#262634] h-full text-white p-5 text-center'>
                         <div className="title text-2xl text-center font-bold pb-1">{certi.title}</div>
                         <p className='detail'>{certi.description}</p>
                         <br />

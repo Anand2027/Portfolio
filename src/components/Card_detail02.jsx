@@ -1,27 +1,31 @@
-import one from "../images/Amazon.png"
-import two from "../images/Netflix1.png"
-import three from "../images/MyPortfolio4.png"
+// import one from "../"
+// import two from "../images/Netflix1.png"
+// import three from "../images/MyPortfolio4.png"
+import CodeScan from "../images/CodeScanAI.png"
+import ColdEmail from "../images/ColdEmail.png"
+import Portfolio from "../images/MyPortfolio.png"
+
 
 
 const cardDataAgain = [
   {
-    title: "Amazon Landing Page",
-    image:one,
-    description:"Created a clone of the Amazon landing page using only HTML and CSS. This project helped me strengthen my front-end skills, focusing on layout structuring and UI replication using pure CSS.",
+    title: "Cold Email Generator",
+    description: "Developed an AI-powered Cold Email Generator using modern AI technologies to generate personalized, context-aware outreach emails, improving efficiency in networking and business communication.",
+    image: ColdEmail,
     dribble:"Visit Here [Link]",
-    link:"https://www.linkedin.com/posts/anand-swaroop-gupta-42b72623b_amazon-activity-7275386505844441088-48uB?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADSXhFoB2foc6uaSDQm92IKWoF8fLkhuKpg",
+    link:"https://ai-cold-email-client.onrender.com/",
   },
   {
-    title: "Responsive Netflix Clone",
-    description: "Built a responsive Netflix landing page using HTML and CSS.The design replicates Netflix’s UI with focus on layout, visuals across devices — all without using JavaScript or frameworks",
-    image: two,
+    title: "CodeScan AI",
+    image:CodeScan,
+    description:"CodeScan AI is an AI-powered code review platform that analyzes source code, detects potential issues, and provides intelligent suggestions to improve code quality, performance, and best practices.",
     dribble:"Visit Here [Link]",
-    link:"https://www.linkedin.com/posts/anand-swaroop-gupta-42b72623b_netflix-html5-css-activity-7282128113038192642-BK5H?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADSXhFoB2foc6uaSDQm92IKWoF8fLkhuKpg",
+    link:"https://codescanai-frontend.onrender.com/",
   },
   {
-    title: "My React Portfolio",
-    description:  "Developed a personal portfolio using React to showcase my projects, skills, and background. The site features a clean, responsive design and smooth navigation to enhance user experienceu",
-    image: three,
+    title: "My Portfolio",
+    description:  "Developed a full-stack personal portfolio using the MERN stack (MongoDB, Express.js, React.js, Node.js) to showcase projects, skills, certifications, and achievements with a responsive and interactive user experience.",
+    image: Portfolio,
     dribble:"Visit My Portfolio",
     link:"https://portfolio-anand-swaroop-guptas-projects.vercel.app/",
   },
