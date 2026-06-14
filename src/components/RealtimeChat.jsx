@@ -1,7 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:5001");
+// const socket = io("http://localhost:5001");
+const socket = io(
+  "https://portfolio-anand-6wet.onrender.com",
+  {
+    transports: ["websocket", "polling"],
+  }
+);
 
 function RealtimeChat() {
 const [isOpen, setIsOpen] = useState(false);
