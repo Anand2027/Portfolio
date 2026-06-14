@@ -22,7 +22,7 @@ import { Element } from 'react-scroll';
 import ChatBot from './components/ChatBot';
 import RealtimeChat from './components/RealtimeChat';
 import AnimatedTimeline from './components/Timeline';
-import  Skills  from './components/skills';
+import  Skills  from './components/Skills';
 
 function App() {
   useEffect(() => {
