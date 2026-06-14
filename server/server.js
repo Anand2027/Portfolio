@@ -1,8 +1,8 @@
 const express = require("express");
-const axios = require("axios");
 const cors = require("cors");
 const http = require("http");
 const { Server } = require("socket.io");
+const Groq = require("groq-sdk");
 require("dotenv").config();
 
 const app = express();
@@ -20,14 +20,21 @@ const io = new Server(server, {
   },
 });
 
-const API_KEY = process.env.GEMINI_API_KEY;
+const groq = new Groq({
+  apiKey: process.env.GROQ_API_KEY,
+});
 
-console.log("Loaded API KEY:", API_KEY ? "YES" : "NO");
+console.log(
+  "Loaded API KEY:",
+  process.env.GROQ_API_KEY ? "YES" : "NO"
+);
 
 // =====================
-// Gemini Chat API Route
+// Groq Chat API Route
 // =====================
 app.post("/api/chat", async (req, res) => {
+  console.log("Chat API called:", new Date().toISOString());
+
   const { question } = req.body;
 
   if (!question) {
@@ -37,36 +44,30 @@ app.post("/api/chat", async (req, res) => {
   }
 
   try {
-    const response = await axios.post(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`,
-      {
-        contents: [
+    const completion =
+      await groq.chat.completions.create({
+        messages: [
           {
             role: "user",
-            parts: [{ text: question }],
+            content: question,
           },
         ],
-      },
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
+        model: "llama-3.3-70b-versatile",
+      });
 
     const answer =
-      response.data.candidates?.[0]?.content?.parts?.[0]?.text ||
+      completion.choices[0]?.message?.content ||
       "No response";
 
     res.json({ answer });
   } catch (error) {
     console.error(
-      "Gemini Error:",
-      error.response?.data || error.message
+      "Groq Error:",
+      error?.message || error
     );
 
     res.status(500).json({
-      error: "Failed to get response from Gemini",
+      error: "Failed to get response from Groq",
     });
   }
 });
