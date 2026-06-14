@@ -32,3 +32,9 @@ const cardDataAgain = [
 ];
 
 export default cardDataAgain;
+
+
+
+
+
+

@@ -1,181 +1,287 @@
-
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
 
-
-
-
-
-
 const Data = [
   {
     title: "CBSE 2018-2020",
-    description:`CBSE CLASS 10 RESULT`,
-    
-    button:"Download ->",
-    link:"//drive.google.com/file/d/1-L2PihDq2oUIo4M9fGdtB-KRT9Sora_V/view?usp=drive_link"
+    description: "CBSE CLASS 10 RESULT",
+    button: "Download ->",
+    link: "//drive.google.com/file/d/1-L2PihDq2oUIo4M9fGdtB-KRT9Sora_V/view?usp=drive_link",
+    dc: "#4F46E5",
+    lbg: "linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%)",
+    lb: "#C7D2FE",
+    dt: "#3730A3"
   },
   {
     title: "CBSE 2020-2022",
-    description: `CBSE CLASS 12 RESULT`,
-    
-     button:"Download ->",
-     link:"//drive.google.com/file/d/1hE_-wcuNdT_7XWnIx8oTPuSUCxN5GBzy/view?usp=drive_link"
+    description: "CBSE CLASS 12 RESULT",
+    button: "Download ->",
+    link: "//drive.google.com/file/d/1hE_-wcuNdT_7XWnIx8oTPuSUCxN5GBzy/view?usp=drive_link",
+    dc: "#9333EA",
+    lbg: "linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%)",
+    lb: "#DDD6FE",
+    dt: "#6B21A8"
   },
   {
     title: "B.Tech SEM I",
-    description:"AKTU B.TECH SEM I RESULT",
- 
-    button:"Download ->",
-    link:" https://drive.google.com/file/d/1eZmblPMFmBHZe06MDb29fth9gbWIyqZN/view?usp=drive_link "
+    description: "AKTU B.TECH SEM I RESULT",
+    button: "Download ->",
+    link: "https://drive.google.com/file/d/1eZmblPMFmBHZe06MDb29fth9gbWIyqZN/view?usp=drive_link",
+    dc: "#DB2777",
+    lbg: "linear-gradient(135deg, #FDF2F8 0%, #FCE7F3 100%)",
+    lb: "#FBCFE8",
+    dt: "#9D174D"
   },
-
   {
     title: "B.Tech SEM II",
-    description:"AKTU B.TECH SEM II RESULT",
- 
-    button:"Download ->",
-    link:"https://drive.google.com/file/d/1pMLl08v0ApIJIEhdJRfA3r4u-pEWJjqq/view?usp=drive_link"
+    description: "AKTU B.TECH SEM II RESULT",
+    button: "Download ->",
+    link: "https://drive.google.com/file/d/1pMLl08v0ApIJIEhdJRfA3r4u-pEWJjqq/view?usp=drive_link",
+    dc: "#EA580C",
+    lbg: "linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%)",
+    lb: "#FED7AA",
+    dt: "#9A3412"
   },
- 
 ];
 
+// Custom Arrows with proper visibility overrides
+const CustomPrevArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <button
+      className={className}
+      style={{
+        ...style,
+        display: "flex !important",
+        justifyContent: "center",
+        alignItems: "center",
+        background: "#4F46E5", // Visible high contrast theme color
+        width: "40px",
+        height: "40px",
+        borderRadius: "50%",
+        boxShadow: "0 4px 15px rgba(79, 70, 229, 0.3)",
+        zIndex: 20,
+        left: "-25px",
+      }}
+      onClick={onClick}
+    >
+      <span style={{ color: "#fff", fontWeight: "900", fontSize: "16px" }}>‹</span>
+    </button>
+  );
+};
 
-
-
-
+const CustomNextArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <button
+      className={className}
+      style={{
+        ...style,
+        display: "flex !important",
+        justifyContent: "center",
+        alignItems: "center",
+        background: "#4F46E5", // Visible high contrast theme color
+        width: "40px",
+        height: "40px",
+        borderRadius: "50%",
+        boxShadow: "0 4px 15px rgba(79, 70, 229, 0.3)",
+        zIndex: 20,
+        right: "-25px",
+      }}
+      onClick={onClick}
+    >
+      <span style={{ color: "#fff", fontWeight: "900", fontSize: "16px" }}>›</span>
+    </button>
+  );
+};
 
 const Results = () => {
-
-
   const settings = {
     dots: true,
     infinite: true,
-    // width:90%,
-    speed: 2000,
-    slidesToShow:4,
+    speed: 800,
+    slidesToShow: 3,
     slidesToScroll: 1,
-
-  responsive: [
-  {
-    breakpoint: 1000,
-    settings: {
-      slidesToShow: 2,
-      slidesToScroll: 1,
-    },
-  },
-  {
-    breakpoint: 768,
-    settings: {
-      slidesToShow: 1,
-      slidesToScroll: 1,
-    },
-  },
-],
-  };
-  
-  const CustomPrevArrow = (props) => {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{
-          ...style,
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          background: "blue",
-          width: "30px",
-          height: "30px",
-          borderRadius: "50%",
-          zIndex: 1,
-          left: "-40px", // Adjust position if needed
-        }}
-        onClick={onClick}
-      />
-    );
+    autoplay: true,
+    autoplaySpeed: 4000,
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          dots: false
+        }
+      }
+    ]
   };
 
-  const CustomNextArrow = (props) => {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{
-          ...style,
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          background: "blue",
-          width: "30px",
-          height: "30px",
-          borderRadius: "50%",
-          zIndex: 1,
-          right: "-40px", // Adjust position if needed
-        }}
-        onClick={onClick}
-      />
-    );
-  };
+  return (
+    <div className="py-16 bg-transparent" style={{ fontFamily: "'Inter', sans-serif" }}>
+      
+      {/* Header Styled Exactly Like Timeline Section */}
+      <div className="max-w-[850px] mx-auto px-4 mb-12 text-center">
+        <span
+          style={{
+            display: "inline-block",
+            fontSize: "11px",
+            fontWeight: 800,
+            letterSpacing: "3px",
+            textTransform: "uppercase",
+            padding: "6px 20px",
+            borderRadius: "50px",
+            background: "#E0E7FF",
+            color: "#4F46E5",
+            border: "1px solid #C7D2FE",
+            marginBottom: "1rem",
+          }}
+        >
+          Performance
+        </span>
+        <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+          Academic{" "}
+          <span
+            style={{
+              background: "linear-gradient(90deg, #4F46E5, #7C3AED, #DB2777)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
+            Results
+          </span>
+        </h2>
+        <p className="text-sm sm:text-base text-slate-500 font-semibold mt-1">
+          Official semester transcripts and scorecard records
+        </p>
+      </div>
 
-  settings.prevArrow = <CustomPrevArrow />;
-  settings.nextArrow = <CustomNextArrow />;
+      {/* Main Slider Container (Slightly larger width to let bigger cards look fantastic) */}
+      <div className="w-[88%] max-w-[880px] mx-auto relative px-2">
+        <Slider {...settings}>
+          {Data.map((certi, index) => (
+            <div className="p-4" key={index}>
+              <div 
+                className="rounded-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between overflow-hidden relative group"
+                style={{
+                  background: certi.lbg,
+                  border: `2.5px solid ${certi.lb}`,
+                  boxShadow: `0 14px 30px -8px ${certi.dc}25`,
+                  minHeight: "290px" // Cards size increased for a premium look
+                }}
+              >
+                {/* Decorative Abstract Accent Block inside card to remove emptiness */}
+                <div 
+                  className="absolute right-[-20px] top-[-20px] w-24 height-24 rounded-full opacity-10 pointer-events-none"
+                  style={{ backgroundColor: certi.dc, width: "100px", height: "100px" }}
+                />
 
+                {/* Upper Content Area */}
+                <div className="p-6 relative z-10">
+                  <div style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
+                    {/* Ring Node matching timeline */}
+                    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginTop: "6px" }}>
+                      <div
+                        style={{
+                          width: "10px",
+                          height: "10px",
+                          borderRadius: "50%",
+                          background: certi.dc,
+                          boxShadow: `0 0 0 4px ${certi.dc}20`,
+                        }}
+                      />
+                    </div>
+                    
+                    <div>
+                      <span 
+                        className="inline-block font-extrabold text-[11px] tracking-widest uppercase px-2.5 py-1 rounded-md mb-3" 
+                        style={{ color: certi.dt, background: "rgba(255,255,255,0.5)", border: `1px solid ${certi.lb}` }}
+                      >
+                        {certi.title}
+                      </span>
+                      <h3 className="font-black text-xl leading-snug tracking-tight text-slate-900 mt-1">
+                        {certi.description}
+                      </h3>
+                    </div>
+                  </div>
+                </div>
 
+                {/* Bottom Action Button Layout */}
+                <div className="p-6 pt-0 mt-auto relative z-10">
+                  <a href={certi.link} target="_blank" rel="noopener noreferrer" className="block w-full">
+                    <button
+                      className="w-full font-extrabold text-xs tracking-wider uppercase py-3 px-4 rounded-xl transition-all duration-300 shadow-sm"
+                      style={{
+                        background: "#ffffff",
+                        color: certi.dt,
+                        border: `1.5px solid ${certi.lb}`,
+                      }}
+                      onMouseOver={(e) => {
+                        e.currentTarget.style.background = certi.dc;
+                        e.currentTarget.style.color = "#ffffff";
+                        e.currentTarget.style.borderColor = certi.dc;
+                      }}
+                      onMouseOut={(e) => {
+                        e.currentTarget.style.background = "#ffffff";
+                        e.currentTarget.style.color = certi.dt;
+                        e.currentTarget.style.borderColor = certi.lb;
+                      }}
+                    >
+                      {certi.button}
+                    </button>
+                  </a>
+                </div>
 
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
 
-
-
-return (
-  <div>
-    <div className="upper  pl-20 pb-10">
-      <h1 className='text-3xl font-bold'>Academic Results</h1>
-      <p className='text-2xl font-bold'>and Performances</p>
+      {/* CSS Overrides to fix slick defaults and native button icon hiding */}
+      <style>{`
+        /* Fix slick arrow default blank content hiding our text arrows */
+        .slick-prev:before, .slick-next:before {
+          display: none !important;
+        }
+        .slick-prev, .slick-next {
+          width: 40px !important;
+          height: 40px !important;
+        }
+        .slick-dots li button:before {
+          color: #64748b !important;
+          font-size: 8px !important;
+          opacity: 0.25 !important;
+        }
+        .slick-dots li.slick-active button:before {
+          color: #4F46E5 !important;
+          opacity: 1 !important;
+          font-size: 10px !important;
+        }
+        .slick-dots {
+          bottom: -35px !important;
+        }
+      `}</style>
     </div>
-
-
-    {/* <div className="down grid gap-6 grid-cols-1 p-10 md:grid-cols-4 md:p-15"> */}
-
-    <div className="down pb-10 w-[70%] mx-auto p">
-
-    <Slider {...{ ...settings, autoplay: true, autoplaySpeed: 3000, infinite: true}}> 
-       {Data.map((certi, index) => (
-       <div 
-        className={`cards hover:scale-95 transition-transform duration-300  rounded-2xl shadow-lg  hover:shadow-2xl  overflow-hidden `} 
-        key={index}
-       >
-         
-         <div className={`h-48 flex items-center justify-center p-1 ${index % 2 == 0 ? 'bg-purple-600' : 'bg-green-600'}`}>
-
-          <h1 className='font-bold text-3xl text-center text-white'>{certi.description}</h1>
-           
-          </div>
-          
-          <div className='bg-[#262634] text-white p-5 text-center'>
-            <div className="title text-2xl text-center font-bold pb-1">{certi.title}</div>
-            <br />
-            <a href={certi.link} target='_main'> 
-              <button className='bg-green-600 px-5 py-2 rounded-xl font-bold hover:bg-green-700 hover:scale-105 duration-700'>
-                {certi.button}
-              </button>
-            </a>
-          </div>
-       </div>
-       ))}
-       </Slider>
-    </div>
-  </div>
-)
-}
+  );
+};
 
 const containerVariants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: .7, ease: "linear" },
+    transition: { duration: 0.6, ease: "easeOut" },
   },
 };
 
@@ -184,11 +290,10 @@ const ResultsWithMotion = () => (
     variants={containerVariants}
     initial="hidden"
     whileInView="visible"
-    viewport={{ once: false, amount: 0.2 }}
+    viewport={{ once: true, amount: 0.15 }}
   >
     <Results />
   </motion.div>
 );
 
 export default ResultsWithMotion;
-

@@ -1,110 +1,3 @@
-// import { MdOutlineLightMode } from "react-icons/md";
-// import { MdDarkMode } from "react-icons/md";
-// import { motion } from "framer-motion";
-// // -------------------------------
-// import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-
-
-// // ---------------------------------
-
-// import React, { useState } from 'react';
-// import { FaBars, FaTimes } from 'react-icons/fa';
-// import Frame from "../images/Frame.svg"
-
-
-
-// const Navbar = ({toggle , setToggle}) => {
-
-//   const [isOpen,setIsOpen] = useState(false);
-  
-
-//    const data=[
-//     {list:"Home" , path:"/"},
-//     {list:"My Projects" , path:"/projects"},
-//     {list:"Academics / Certificates" , path:"/academics"},
-//     {list:"Feedbacks" , path:"/feedbacks"},
-//    ];
-
-//   return (
-
-  
-      
-
-//     <div className='  bg-purple-600 relative w-[100vw]  py-4    '>
-//       <div className="container flex flex-row items-center justify-evenly">
-
-//        <Link to="/">
-//        <img src={Frame}
-//        className='bg-white rounded'/>
-//        </Link>
-
-
-//         {/* Desktop Nav */}
-//         <nav className={` ${isOpen ? "flex items-center  gap-3 text-white   bg-purple-600 font-bold  p-6 flex-col absolute top-18.5 w-full" : "hidden"} md:flex gap-4 text-white  text-[1.15rem] font-medium`} >
-//           {
-//             data.map((link,index) => (
-//               <Link  key={index} to={link.path}
-//                              className = {`${isOpen ?  "text-white" : ""} transition duration-500  hover:underline      hover:text-yellow-400 cursor-pointer px-3 `}
-//                            >
-//                            {link.list}
-//                            </Link>
-//             ))}
-//         </nav>
-
-       
-
-//      {/* HAmburger icon */}
-//       <button className='  md:hidden text-2xl  text-white' onClick={() => setIsOpen(!isOpen)}>
-//         {isOpen?<FaTimes /> : <FaBars />}</button>
-       
-//         <Link to="/contacts">       <button className={`hidden bg-white px-4 py-2 rounded-sm 
-       
-//          md:flex transition duration-400 
-//           ${isOpen ? "text-red-600" : "text-black"}
-//          hover:scale-103 border-none  `}>
-//         Contact Me
-//         </button>
-//         </Link>
-
-
-//        <div className="p text-4xl ml-20 cursor-pointer text-white"onClick={()=>setToggle(!toggle)}>
-//        {toggle ? <MdOutlineLightMode/> : <MdDarkMode/>}
-//        </div>
-//       </div>
-//     </div>
-    
-//   )
-// }
-
-
-// export default Navbar;
-
-
-
-
-
-
-// const containerVariants = {
-//   hidden: { opacity: 0, x: -100 }, // start from left
-//   visible: {
-//     opacity: 1,
-//     x: 0, // move to original position
-//     transition: { duration: 1, ease: "linear" },
-//   },
-// };
-
-// const NavbarMotion = () => (
-//   <motion.div
-//     variants={containerVariants}
-//     initial="hidden"
-//     whileInView="visible"
-//     viewport={{ once: false, amount: 0.2 }}
-//   >
-//     <Navbar/>
-//   </motion.div>
-// );
-
-
 import React, { useState } from 'react';
 import { MdOutlineLightMode, MdDarkMode } from "react-icons/md";
 import { FaBars, FaTimes } from 'react-icons/fa';
@@ -117,21 +10,26 @@ const Navbar = ({ toggle, setToggle }) => {
   const data = [
     { list: "Home", to: "home" },
     { list: "My Projects", to: "projects" },
-    { list: "Academics / Certificates", to: "academics" },
+    { list: "Academics", to: "academics" },
     { list: "Feedbacks", to: "feedbacks" },
   ];
 
   return (
-    <div className="bg-purple-600 w-full py-4  sticky top-0 z-50">
-      <div className="container flex items-center justify-evenly">
+    <div className="w-full bg-purple-700 sticky top-0 z-50 shadow-xl border-b border-purple-600 font-sans">
+      {/* Increased padding for a more spacious and professional premium feel */}
+      <div className="w-[92%] max-w-[1280px] mx-auto py-5 flex items-center justify-between">
 
-        {/* Logo */}
+        {/* Logo Section Frame with dynamic lift interaction */}
         <ScrollLink to="home" smooth={true} duration={700} offset={-70}>
-          <img src={Frame} alt="Logo" className="bg-white rounded cursor-pointer" />
+          <img 
+            src={Frame} 
+            alt="Anand's Portfolio Logo" 
+            className="h-10 w-auto bg-white rounded-xl p-1.5 cursor-pointer shadow-md hover:scale-105 active:scale-95 transition-all duration-200" 
+          />
         </ScrollLink>
 
-        {/* Desktop/Nav */}
-        <nav className={`${isOpen ? "flex flex-col p-6 absolute top-18.5 w-full bg-purple-600 text-white" : "hidden"} md:flex gap-4 text-white text-[1.15rem] font-medium`}>
+        {/* Desktop View Navigation Links - Enriched with Larger Font Size (text-lg) */}
+        <nav className="hidden md:flex items-center gap-4 text-white font-extrabold text-lg tracking-tight">
           {data.map((link, index) => (
             <ScrollLink
               key={index}
@@ -139,27 +37,79 @@ const Navbar = ({ toggle, setToggle }) => {
               smooth={true}
               duration={700}
               offset={-70}
-              className="cursor-pointer px-3 transition hover:text-yellow-400 hover:underline"
-              onClick={() => setIsOpen(false)}
+              activeClass="text-yellow-400 font-black scale-105"
+              spy={true}
+              className="cursor-pointer px-4 py-2.5 rounded-xl text-purple-100 hover:text-white hover:bg-purple-600 transition-all duration-300"
             >
               {link.list}
             </ScrollLink>
           ))}
         </nav>
 
-        {/* Hamburger Icon */}
-        <button className="md:hidden text-2xl text-white" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <FaTimes /> : <FaBars />}
-        </button>
-        <ScrollLink to="contact" smooth={true} duration={700} offset={-70}>
-          <button className="hidden md:flex bg-white px-4 py-2 rounded-sm text-black hover:scale-105 transition">
-            Contact Me
-          </button>
-        </ScrollLink>
+        {/* Right Side Interactions Tray (CTAs + Themes) */}
+        <div className="hidden md:flex items-center gap-6">
+          <ScrollLink to="contact" smooth={true} duration={700} offset={-70}>
+            <button className="bg-white px-6 py-3 rounded-xl text-purple-700 font-black text-sm uppercase tracking-widest hover:bg-purple-50 active:scale-95 shadow-lg shadow-purple-900/30 transition-all duration-200 cursor-pointer">
+              Contact Me
+            </button>
+          </ScrollLink>
 
-        {/* Theme Toggle */}
-        <div className="text-4xl ml-6 cursor-pointer text-white" onClick={() => setToggle(!toggle)}>
-          {toggle ? <MdOutlineLightMode /> : <MdDarkMode />}
+          <div 
+            className="text-3xl cursor-pointer text-purple-100 hover:text-white p-2 rounded-xl hover:bg-purple-600 transition-all duration-200" 
+            onClick={() => setToggle(!toggle)}
+          >
+            {toggle ? <MdOutlineLightMode /> : <MdDarkMode />}
+          </div>
+        </div>
+
+        {/* Mobile Functional Hamburger Controls & Actions Row */}
+        <div className="flex md:hidden items-center gap-5">
+          <div 
+            className="text-3xl cursor-pointer text-white p-1" 
+            onClick={() => setToggle(!toggle)}
+          >
+            {toggle ? <MdOutlineLightMode /> : <MdDarkMode />}
+          </div>
+
+          <button 
+            className="text-2xl text-white focus:outline-none p-1.5 bg-purple-600 rounded-xl" 
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <FaTimes /> : <FaBars />}
+          </button>
+        </div>
+
+      </div>
+
+      {/* Floating Card Design Menu Panel for Mobile (No more ugly full-width blocks!) */}
+      <div className={`absolute top-[90%] left-1/2 -translate-x-1/2 w-[92%] bg-purple-800 border border-purple-600 rounded-3xl shadow-2xl shadow-purple-950/50 transition-all duration-300 ease-out md:hidden overflow-hidden ${
+        isOpen ? "opacity-100 translate-y-3 visible pointer-events-auto" : "opacity-0 translate-y-0 invisible pointer-events-none"
+      }`}>
+        {/* Expanded font sizing and extra padding loops for clean mobile visuals */}
+        <div className="p-6 flex flex-col gap-4 font-black text-xl tracking-wide text-purple-100">
+          {data.map((link, index) => (
+            <ScrollLink
+              key={index}
+              to={link.to}
+              smooth={true}
+              duration={700}
+              offset={-70}
+              activeClass="bg-purple-900 text-yellow-400 pl-4 border-l-4 border-yellow-400"
+              spy={true}
+              className="cursor-pointer py-3.5 px-4 rounded-2xl hover:bg-purple-700 hover:text-white transition-all duration-200 block text-left"
+              onClick={() => setIsOpen(false)}
+            >
+              {link.list}
+            </ScrollLink>
+          ))}
+          
+          <div className="h-[2px] bg-purple-700/60 my-2" />
+          
+          <ScrollLink to="contact" smooth={true} duration={700} offset={-70} onClick={() => setIsOpen(false)}>
+            <button className="w-full bg-white text-purple-800 font-black uppercase text-sm tracking-widest py-4 rounded-2xl transition active:scale-[0.98] shadow-md">
+              Contact Me
+            </button>
+          </ScrollLink>
         </div>
       </div>
     </div>

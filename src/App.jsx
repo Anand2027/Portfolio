@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div style={{ background: toggle ? '#1f2323' : '', color: toggle ? 'white' : '' }}>
-      <ParticlesBackground />
+      {/* <ParticlesBackground /> */}
       <BrowserRouter>
         
         <Final />
