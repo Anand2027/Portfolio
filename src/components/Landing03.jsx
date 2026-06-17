@@ -1,5 +1,6 @@
 import React from 'react';
-import photoTwo from "../images/photoTwo.png"; // Adjust the path based on the actual location of the image
+// import anandpurple from "../images/anand_purple.png"
+import anandlook from "../images/anand_look.png"
 
 const Landing03 = () => {
   return (
@@ -10,7 +11,7 @@ const Landing03 = () => {
         <div className="w-full md:w-[46%] flex justify-center items-center order-2 md:order-1">
           <div className="relative w-full max-w-[480px] rounded-[2rem] overflow-hidden bg-gradient-to-tr from-slate-100 to-indigo-50/20 p-2.5 border border-slate-200/60 shadow-xl shadow-slate-200/40 group">
             <img 
-              src={photoTwo} 
+              src={anandlook} 
               alt='About Me profile illustration'
               // Changed object-cover to object-contain and removed forced max-height to stop image cropping
               className='w-full h-auto object-contain rounded-[1.5rem] transform group-hover:scale-[1.015] transition-transform duration-500 ease-out mx-auto'

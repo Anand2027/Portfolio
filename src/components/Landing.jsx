@@ -5,10 +5,12 @@ import anand from "../images/anand.png"
 import { motion } from 'framer-motion';
 import Landing03 from './Landing03';
 import { Link } from 'react-router-dom';
+import Anand from '../images/anand_look.png';
+import anandpurple from "../images/anand_purple.png"
 
 const Landing = () => {
   return (
-    <div className="w-full min-h-[90vh] flex items-center bg-transparent py-10 md:py-16 font-sans">
+    <div className=" min-h-[90vh] flex items-center bg-transparent py-10 md:py-16 font-sans">
       <div className="w-[94%] max-w-[1280px] mx-auto flex flex-col md:flex-row items-center justify-between gap-10 md:gap-8">
         
         {/* Left Side Content - Perfectly proportioned space */}
@@ -45,15 +47,17 @@ const Landing = () => {
           <div className="absolute -left-6 -top-6 w-32 h-32 bg-indigo-100/50 rounded-full blur-3xl pointer-events-none hidden md:block" />
           <div className="absolute -right-6 -bottom-6 w-44 h-44 bg-pink-100/40 rounded-full blur-3xl pointer-events-none hidden md:block" />
 
-          <div className="relative w-full max-w-[520px] rounded-[2.5rem] overflow-hidden bg-gradient-to-tr from-slate-100/80 via-indigo-50/20 to-white p-3 border-2 border-slate-100 shadow-2xl shadow-slate-300/60 group">
+          <div className="relative w-full max-w-[520px] rounded-[2.5rem] overflow-hidden bg-gradient-to-tr from-slate-100/80 via-indigo-50/20 to-white p-3 shadow-[0_28px_60px_-18px_rgba(15,23,42,0.32),0_0_30px_rgba(168,85,247,0.4)] transition-shadow duration-500 ease-out group hover:shadow-[0_40px_90px_-20px_rgba(15,23,42,0.45),0_0_40px_rgba(168,85,247,0.6)] border border-indigo-300/50" style={{
+              background: 'linear-gradient(135deg, rgba(226, 232, 240, 0.8), rgba(224, 231, 255, 0.2), white)'
+            }}>
             <img 
-              src={anand} 
-              className="w-full h-auto object-cover rounded-[1.8rem] transform group-hover:scale-[1.015] transition-transform duration-500 ease-out" 
+              src={anandpurple} 
+              className="w-full h-auto object-contain rounded-[1.8rem] transform group-hover:scale-[1.015] transition-transform duration-500 ease-out" 
               alt="Anand's prominent portrait layout" 
             />
             
             {/* Subtle decorative edge gradient border lines */}
-            <div className="absolute inset-0 rounded-[2.5rem] border border-white/60 pointer-events-none" />
+            <div className="absolute inset-0 rounded-[2.5rem] border border-purple-200/30 pointer-events-none" />
           </div>
         </div>
         
