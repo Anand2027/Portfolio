@@ -1,7 +1,7 @@
 import React from "react";
 import HighlightText from "../Reuse/HighlightText";
 import Button from "../Reuse/Button";
-import anand from "../images/anand.png";
+// import anand from "../images/anand.png";
 import { motion } from "framer-motion";
 import Landing03 from "./Landing03";
 import { Link } from "react-router-dom";

@@ -16,7 +16,7 @@ const Landing06 = () => {
       .then(
         () => {
           toast.success('Thanks for contacting!', { position: "top-center" });
-          form.current.reset(); // Submitting ke baad fields auto-clear ho jayengi
+          form.current.reset(); 
         },
         (error) => {
           toast.error('FAILED...', error.text);
@@ -27,7 +27,7 @@ const Landing06 = () => {
   return (
     <div className="py-16 bg-transparent" style={{ fontFamily: "'Inter', sans-serif" }}>
       
-      {/* Header Module - Matching Academic & Timeline Themes */}
+      {/* Header Module */}
       <div className="max-w-[760px] mx-auto px-4 mb-10 text-center">
         <span
           style={{
@@ -64,12 +64,12 @@ const Landing06 = () => {
         </p>
       </div>
 
-      {/* Lower Form Wrapper - Structured with clean horizontal boundaries */}
+      {/* Lower Form Wrapper */}
       <div className="w-[90%] max-w-[700px] mx-auto px-1">
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="bg-white p-6 sm:p-10 rounded-2xl border border-slate-100 shadow-xl hover:shadow-2xl transition-shadow duration-300 w-full"
+          className="bg-white p-6 sm:p-10 rounded-2xl border border-indigo-100 shadow-[0_30px_80px_rgba(79,70,229,0.25)] hover:shadow-[0_30px_100px_rgba(124,58,237,0.35)] transition-all duration-300 w-full"
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             
@@ -81,7 +81,7 @@ const Landing06 = () => {
               <input
                 type="text"
                 placeholder="Enter full name"
-                className="w-full px-4 py-2.5 bg-slate-50 text-slate-800 placeholder-slate-400 border border-slate-200 rounded-xl text-sm font-medium transition-all duration-200 outline-none focus:bg-white focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
+                className="w-full px-4 py-2.5 bg-indigo-50/30 text-slate-800 placeholder-slate-400 border border-indigo-400/70 rounded-xl text-sm font-medium transition-all duration-200 outline-none focus:bg-white focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 name="from_name"
                 required
               />
@@ -95,7 +95,7 @@ const Landing06 = () => {
               <input
                 type="email"
                 placeholder="Enter email"
-                className="w-full px-4 py-2.5 bg-slate-50 text-slate-800 placeholder-slate-400 border border-slate-200 rounded-xl text-sm font-medium transition-all duration-200 outline-none focus:bg-white focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
+                className="w-full px-4 py-2.5 bg-indigo-50/30 text-slate-800 placeholder-slate-400 border border-indigo-400/70 rounded-xl text-sm font-medium transition-all duration-200 outline-none focus:bg-white focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 name="from_email"
                 required
               />
@@ -109,7 +109,7 @@ const Landing06 = () => {
               <input
                 type="tel"
                 placeholder="Enter phone number"
-                className="w-full px-4 py-2.5 bg-slate-50 text-slate-800 placeholder-slate-400 border border-slate-200 rounded-xl text-sm font-medium transition-all duration-200 outline-none focus:bg-white focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
+                className="w-full px-4 py-2.5 bg-indigo-50/30 text-slate-800 placeholder-slate-400 border border-indigo-400/70 rounded-xl text-sm font-medium transition-all duration-200 outline-none focus:bg-white focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 name="from_contact"
                 required
               />
@@ -122,7 +122,7 @@ const Landing06 = () => {
               </label>
               <div className="relative">
                 <select
-                  className="w-full px-4 py-2.5 bg-slate-50 text-slate-800 border border-slate-200 rounded-xl text-sm font-medium transition-all duration-200 outline-none appearance-none focus:bg-white focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
+                  className="w-full px-4 py-2.5 bg-indigo-50/30 text-slate-800 border border-indigo-400/70 rounded-xl text-sm font-medium transition-all duration-200 outline-none appearance-none focus:bg-white focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                   name="Topic_name"
                   defaultValue=""
                   required
@@ -134,7 +134,6 @@ const Landing06 = () => {
                   <option value="react">React / Frontend Ecosystem</option>
                   <option value="fullstack">Full Stack Work / Freelance</option>
                 </select>
-                {/* Custom geometric dynamic select arrow down */}
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-400">
                   <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                     <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
@@ -151,20 +150,20 @@ const Landing06 = () => {
               <textarea
                 placeholder="Type your message details here..."
                 rows="4"
-                className="w-full px-4 py-2.5 bg-slate-50 text-slate-800 placeholder-slate-400 border border-slate-200 rounded-xl text-sm font-medium transition-all duration-200 outline-none resize-none focus:bg-white focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
+                className="w-full px-4 py-2.5 bg-indigo-50/30 text-slate-800 placeholder-slate-400 border border-indigo-400/70 rounded-xl text-sm font-medium transition-all duration-200 outline-none resize-none focus:bg-white focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
                 name="message"
                 required
               ></textarea>
             </div>
           </div>
 
-          {/* Terms Agreement Module Box */}
+          {/* Terms Agreement */}
           <div className="flex items-start mt-5 pl-0.5">
             <div className="flex items-center h-5">
               <input 
                 type="checkbox" 
                 id="terms" 
-                className="w-4 h-4 text-indigo-600 border-slate-300 rounded focus:ring-indigo-500/20" 
+                className="w-4 h-4 text-indigo-600 border-indigo-400 rounded focus:ring-indigo-500/20" 
                 required
               />
             </div>
@@ -173,7 +172,7 @@ const Landing06 = () => {
             </label>
           </div>
 
-          {/* Dynamic Premium Action Button */}
+          {/* Button */}
           <button
             type="submit"
             className="mt-6 w-full sm:w-auto font-extrabold text-xs tracking-wider uppercase py-3 px-8 text-white rounded-xl shadow-md shadow-indigo-600/10 hover:shadow-lg hover:shadow-indigo-600/20 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 focus:outline-none"
@@ -189,9 +188,8 @@ const Landing06 = () => {
   );
 }
 
-// Framer motion variants config
 const containerVariants = {
-  hidden: { opacity: 0, x: -60 }, // Smooth starting displacement offset
+  hidden: { opacity: 0, x: -60 },
   visible: {
     opacity: 1,
     x: 0,

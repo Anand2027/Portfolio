@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 // import { Link as ScrollLink } from 'react-scroll';
-import Frame from "../images/Frame.svg";
+// import Logo from "../images/navbarLogo.png";
+import Logo from "../images/2222.png";
 import { Link as ScrollLink } from "react-scroll";
 
 
@@ -25,11 +26,7 @@ const Navbar = () => {
 
         {/* Logo */}
         <ScrollLink to="home" smooth={true} duration={700} offset={-70}>
-          <img
-            src={Frame}
-            alt="Anand's Portfolio Logo"
-            className="h-10 w-auto bg-white rounded-xl p-1.5 cursor-pointer shadow-md hover:scale-105 active:scale-95 transition-all duration-200"
-          />
+           <img src={Logo} alt="Logo" className='bg-white p-1.45 rounded-lg h-11 shadow-lg shadow-white/5' />
         </ScrollLink>
 
         {/* Desktop Navigation */}

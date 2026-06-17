@@ -1,5 +1,6 @@
 import React from 'react'
-import Frame from "../images/Frame.svg"
+// import Frame from "../images/Frame.svg"
+import Logo from "../images/2222.png";
 import { FaGithub, FaFacebook, FaInstagramSquare, FaHeart } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6"
 import { motion } from 'framer-motion';
@@ -14,7 +15,7 @@ const Landing07 = () => {
         
         {/* Logo Frame Brand Container */}
         <div className="flex items-center justify-center transition-transform duration-300 hover:scale-[1.05]">
-          <img src={Frame} alt="Logo" className='bg-white p-1.5 rounded-lg h-11 shadow-lg shadow-white/5' />
+          <img src={Logo} alt="Logo" className='bg-white p-1.35 rounded-lg h-11 shadow-lg shadow-white/5' />
         </div>
 
         {/* Middle Navigation Link Nodes - Increased text to text-base & font-bold */}
