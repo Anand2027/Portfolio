@@ -4,6 +4,9 @@ import { FiDownload } from "react-icons/fi"; // Using a clean download icon for 
 
 const Landing04 = () => {
   return (
+
+    
+
     <div className="w-full py-16 bg-transparent font-sans">
       <div className="w-[92%] max-w-[1140px] mx-auto px-1">
         
